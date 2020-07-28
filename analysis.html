@@ -1,0 +1,75 @@
+<h1>Technical test in Data Science</h1>
+<h2>&nbsp;</h2>
+
+<h2>Minimum requirements</h2>
+<h2>&nbsp;</h2>
+
+<p><strong>Q1 - What is the average distance traveled by trips with a maximum of 2 passengers</strong></p>
+<p>The average distance is 2.66 miles</p>
+<p>&nbsp;</p>
+
+<p><strong>Q2 - Which are the 3 biggest vendors based on the total amount of money raised</strong></p>
+<p>The following chart shows the top three vendors</p>
+<p><img src="2-biggest.png" /></p>
+<p>&nbsp;</p>
+
+<p><strong>Q3 - Make a histogram of the monthly distribution over 4 years of rides paid with cash</strong></p>
+<p>The following charts show the monthly distributions per year of rides paid with cash</p>
+<table>
+<tbody>
+<tr>
+<td><img src="3-2009.png" /></td>
+<td><img src="3-2010.png" /></td>
+</tr>
+<tr>
+<td><img src="3-2011.png" /></td>
+<td><img src="3-2012.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+<p><strong>Q4 - Make a time series chart computing the number of tips each day for the last 3 months of 2012</strong></p>
+<p>The following time series chart shows the tips for each day of the months of August, September, and October of 2012. Note that, we know from the previous answer that October is the last month with data of 2012.</p>
+<p><img src="4-tips.png" /></p>
+<h2>&nbsp;</h2>
+
+<h2>Bonus items</h2>
+<h2>&nbsp;</h2>
+
+<p><strong>Q5 - What is the average trip time on Saturdays and Sundays</strong></p>
+<p>The average trip time on weekends is 8 minutes and 44 seconds</p>
+<p>&nbsp;</p>
+
+<p><strong>Q6 - Analyze the data to find and prove seasonality</strong></p>
+<p>The following charts show the monthly distributions of rides without the cash filtering. Although some data is missing in 2011 and 2012, we still can see that the number of rides decreases dramatically in December of 2009 and 2010.  We also see a significant decrease in January and February of 2009, 2010, and 2011. Note that these are the winter months in NYC. Probably, people tend to stay more at home in colder periods and, even more, in the holidays and winter breaks of December. </p>
+<table>
+<tbody>
+<tr>
+<td><img src="6-2009.png" /></td>
+<td><img src="6-2010.png" /></td>
+</tr>
+<tr>
+<td><img src="6-2011.png" /></td>
+<td><img src="6-2012.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+
+<p><strong>Q8 - Find what the fare amount (inclusive of tolls) for a taxi ride in New York City given the pickup and dropoff locations</strong></p>
+<p>Given the pickup and dropoff locations, we can get the trip distance. Luckily, this is already calculated in the original data. Hence, we can simply use the trip distance as the independent variable and the fare amount as the dependent one, which leads to a simple linear regression problem. After testing and training our data, we got the following results:</p>
+<p><strong>Score:</strong>&nbsp;0.91</p>
+<p><strong>Mean Absolute Error:</strong>&nbsp;0.98&nbsp;</p>
+<p>Note that, we got a score of 0.91 with a simple linear algorithm approach, which indicates a strong relationship between the trip distance and the fare amount. Also, the mean absolute error shows that, on average, the prediction error is lower than one dollar (up or down).</p>
+<p>Hence, considering the coefficients found by the algorithm, the formula to compute the fare amount is: <strong>3.61509696 + (2.20388229 * trip_distance)</strong></p>
+<p>Finally, the following chart shows the expected fare amount as blue dots and the prediction of the linear regression algorithm as a red line. We see that there is still room for improvement if we further analyze weird data (e.g., a trip distance close to 50 with fare amount close to zero).</p>
+<p><img src="8-fare.png" /></p>
+<p>&nbsp;</p>
+
+<p><strong>Q9 - Make a latitude and longitude map view of pickups and dropoffs in the year 2010</strong></p>
+<p>The following figure shows the NYC map with pickups and dropoffs</p>
+<p><img src="9-map.png" /></p>
+<p>&nbsp;</p>
+
+
